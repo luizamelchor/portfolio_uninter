@@ -4,12 +4,19 @@
     box-sizing: border-box;
 }
 
+#container-externo {
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 0 40px;
+}
+
 body {
     background-color: #e6e4de;
     color: #1C1C1C;
     font-family: "Inter", sans-serif;
     font-size: 15px;
     margin: 0;
+    text-align: justify;
 }
 
 #header {
@@ -30,6 +37,7 @@ body {
     background-color: #1c1c1ce0;
     height: 60px;
     padding: 20px;
+    right: 0;
 }
 
 #header.shrink .botao{
@@ -66,24 +74,87 @@ body {
     color: #eff9f9;
 }
 
+a {
+    text-decoration: none;
+    color: #eff9f9;
+}
+
 h1 {
     font-size: 27px;
     font-weight: bold;
 }
 
+.formacao-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px; 
+    margin-top: 15px;
+}
 
-#sobreMim, #formacao {
-    padding-left: 60px;
+#idiomas {
+    border-left: 3px solid rgb(75, 75, 75);
+    padding-left: 20px;
+}
+
+#sobreMim, #formacao, #projetos {
+    padding: 20px 0 30px 0;
+}
+
+#formacao {
+    margin-top: 15px;
 }
 
 img {
-    margin: 10px 10px 5px 0;
-    border-radius: 15px;
-}
-#luiza { 
     width: 250px;
     height: auto;
+    border-radius: 5px;
+}
+
+#luiza { 
+    height: auto;
     float: left;
+    margin: 10px 22px 12px 0;
+}
+
+q {
+    font-size: 17px;
+    font-weight: bold;
+    border-left: 3px solid gray;
+    padding-left: 7px;
+}
+
+span {
+    font-style: italic;
+    font-size: 12px;
+    padding: 10px;
+}
+
+#icone-graduacao,
+#icone-idiomas {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+#icone-graduacao li,
+#icone-idiomas li {
+    list-style: none;
+    padding-left: 28px;
+    position: relative;
+    line-height: 1.8;
+}
+
+#icone-graduacao li::before {
+    content: url('/imagens/chapeu.png'); /* 🧠 chapéu de formatura */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#icone-idiomas li::before {
+    content: url('/imagens/livro.png'); /* 📚 ícone de livro */
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .container-projetos {
@@ -91,19 +162,98 @@ img {
     justify-content: center;
     flex-wrap: wrap; /* Quebra a linha se não tiver espaço*/
     gap: 25px; /* Espaço entre divs */
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto; 
 }
 
-div.projeto {
+.projeto {
+    position: relative;
     width: 250px;
-    height: 390px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.projeto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    text-align: center;
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.projeto:hover img {
+    opacity: 0.3;
+}
+
+.projeto:hover .middle {
+    opacity: 1;
+}
+
+.projeto:hover {
+    cursor: pointer;
+}
+
+.texto {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+.texto a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.texto a:hover {
+    cursor: pointer;
 }
 
 #popup {
-    display: none;
-    /* Configurar popup aqui */
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 2px 2px 7px #1c1c1c6b;
+    font-size: 17px;
+    background-color: rgb(207, 207, 200);
+}
+
+#nome, #email, #msg {
+    margin-bottom: 5px;
+}
+
+#popup::backdrop {
+    background-color: #1c1c1c77;
+}
+
+#enviar, #fechar {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1C1C1Cce;
+    border: none;
+    color: #e6e4de;
+    font-size: 16px;
+    padding: 15px;
+    margin: 10px 5px 7px 0;
+    height: 15px;
+}
+
+#enviar, #fechar:hover {
+    cursor: pointer;
 }
 
 footer {
@@ -115,4 +265,5 @@ footer {
     height: 75px;
     width: 100%;
     margin-top: 10px;
+    bottom: 0;
 }

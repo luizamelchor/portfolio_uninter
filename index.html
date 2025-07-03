@@ -8,58 +8,112 @@
 </head>
 <body>
     <header id="header">
-        <button class="botao">Sobre mim</button>
-        <button class="botao">Formação</button>
-        <button class="botao">Projetos</button>
-        <button class="botao" id="contato">Contato</button>
+            <button class="botao"><a href="#sobreMim">Sobre mim</a></button>
+            <button class="botao"><a href="#formacao">Formação</a></button>
+            <button class="botao"><a href="#projetos">Projetos</a></button>
+            <button class="botao" id="contato"><a href="#popup">Contato</a></button>
     </header>
-    <section id="sobreMim">
-        <img src="/imagens/foto_mozart.jpg" alt="Luíza Melchor pousando com uma representação em Playmobil de W. A. Mozart" id="luiza">
-        <h1>Sobre Mim</h1>
-        <p>
-            Me chamo Luíza Melchor Bisson da Costa, tenho 19 anos, sou uma 
-            pessoa muita curiosa e que adora aprender temas diversos. Um dos meus hobbies
-            favoritos é aprender novas línguas, já comecei a estudar russo, japonês, alemão, italiano, 
-            coreano, porém atualmente estou focando no italiano e alemão de forma autodidata, 
-            também já estudei inglês, mas agora só o pratico. Outra paixão que tenho é a de viajar pelo mundo,
-            conhecer novas pessoas, descobrir novas culturas, foi o motivo por trás de escolher a foto ao lado 
-            que foi tirada em Salzburgo, Áustria na casa do Mozart.
-        </p>
-    </section>
-    
-    <section id="formacao">
-        <h1>Formação Educacional</h1>
-        <p>
-            Cursando Análise e Desenvolvimento de Sistemas pelo
-            Centro Universitário Internacional UNINTER (2025-2027)
-        </p>
-        <p>
-            Idiomas: português fluente, inglês 
-            intermediário, italiano básico, alemão básico.
-        </p>
-    </section>
-    
-    <section id="projetos">
-        <h1>Projetos</h1>
-        <p>
-            Links para projetos: colocar projetos da matéria e pessoais
-        </p>
-        <div class="container-projetos">
-            <div class="projeto"><img src="/imagens/loading.jpg" alt=""></div>
-            <div class="projeto"><img src="/imagens/loading.jpg" alt=""></div>
-            <div class="projeto"><img src="/imagens/loading.jpg" alt=""></div>
-            <div class="projeto"><img src="/imagens/loading.jpg" alt=""></div>
-            <div class="projeto"><img src="/imagens/loading.jpg" alt=""></div>
+    <div id="container-externo">
+        <section id="sobreMim">
+            <img src="/imagens/selfie.jpg" id="luiza" alt="Selfie de Luíza Melchor">
+            <h1>Sobre Mim</h1>
+            <p>
+                Me chamo Luíza Melchor Bisson da Costa, tenho 19 anos, sou uma 
+                pessoa muita curiosa e que adora aprender temas diversos. Pode parecer um parodoxo, mas eu sou muito pragmática, adoro ver como funciona dispostivos e, além de amar questionar tudo a minha volta. <br>
+                Um dos meus hobbies
+                favoritos é aprender novas línguas, já comecei a estudar russo, japonês, alemão, italiano, 
+                coreano, porém atualmente estou focando no italiano e alemão de forma autodidata, 
+                também já estudei inglês, mas agora só o pratico.<br> Outra paixão que tenho é a de viajar pelo mundo,
+                conhecer novas pessoas, descobrir novas culturas, experimentar novas comidas, foi o motivo por trás de escolher a foto ao lado 
+                que foi tirada no frio aconchegante de Urubici, SC.
+            </p>
+            <q>Saber é poder.</q><br>
+            <span>- Francis Bacon</span>
+        </section>
+        
+        <section id="formacao">
+            <h1>Formação Educacional</h1>
+            <div class="formacao-grid">
+                <div id="graduacao">
+                    <h2>Graducação</h2>
+                <ul id="icone-graduacao">
+                    <li>Cursando Análise e Desenvolvimento de Sistemas pelo</li>
+                    <li>Centro Universitário Internacional UNINTER (2025-2027)</li>
+                    <li>Focada em Desenvolvimento Web</li>
+                    <li>Interessada em UX e UI Design</li>
+                </ul>
+                </div> 
+                <div id="idiomas">
+                    <h2>Idiomas</h2>
+                    <ul id="icone-idiomas">
+                        <li>Português Fluente</li>
+                        <li>Inglês Intermediário</li>
+                        <li>Italiano Básico</li>
+                        <li>Alemão Básico</li>
+                    </ul> 
+                </div>
+            </div>       
+        </section>
+        
+        <section id="projetos">
+            <h1>Projetos</h1>
+            <p>
+                Links para projetos: colocar projetos da matéria e pessoais
+            </p>
+            <div class="container-projetos">
+                <div class="projeto"><img src="/imagens/tecnologica.png" alt="">
+                    <div class="middle">
+                        <div class="texto">
+                            <a href="https://luizamelchor.github.io/web_uninter/">Acesse-o aqui!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="projeto"><img src="/imagens/tecnologica.png" alt="" width="250px">
+                    <div class="middle">
+                        <div class="texto">
+                            <a href="#">Acesse-o aqui!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="projeto"><img src="/imagens/tecnologica.png" alt="" width="250px">
+                    <div class="middle">
+                        <div class="texto">
+                            <a href="#">Acesse-o aqui!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="projeto"><img src="/imagens/tecnologica.png" alt="" width="250px">
+                    <div class="middle">
+                        <div class="texto">
+                            <a href="#">Acesse-o aqui!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="projeto"><img src="/imagens/tecnologica.png" alt="" width="250px">
+                    <div class="middle">
+                        <div class="texto">
+                            <a href="#">Acesse-o aqui!</a>
+                        </div>
+                    </div>
+                </div>
             </div>    
-    </section>
-    
-    <form id="popup">
-        <!-- o que colocar no formulário para contato-->
-        Nome: <input type="text"> <br> 
-        Email: <input type="email" name="email" id="email"> <br>
-        Mensagem: <input type="text" placeholder="Queria contratá-la para...">   
-    </form>
-
+        </section>
+        
+        <dialog id="popup">
+            <h2>Formulário de contato</h2>
+            <form>
+                <label for="nome">Nome: </label>
+                <input type="text" name="nome" id="nome"><br>
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email"><br>
+                <label for="mensagem">Mensagem: </label>
+                <input type="text" name="msg" id="msg" placeholder="Queria contratá-la para..."><br>
+                <button id="enviar">Enviar</button>
+                <button id="fechar">Fechar</button>
+            </form>
+                
+        </dialog>
+    </div>
     <footer>
         <p>Site teste feito para a disciplina de Ferramentas de Web</p>
     </footer>
