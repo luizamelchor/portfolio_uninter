@@ -1,5 +1,7 @@
+/* Importando nova fonte da internet */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+/* Declarando variáveis */
 :root {
     --branco: #e6e4de;
     --preto: #1C1C1C;
@@ -27,20 +29,23 @@ body {
     text-align: justify;
 }
 
+/* CONFIGURAÇÕES DA HEADER E SUA TRANSIÇÃO */
+
 #header {
     background-color: var(--preto);
     display: flex;
     justify-content: center;
     align-items: center;
-    position: sticky; /* header fixa no topo durante rolagem e ocupa espaço no fluxo */
+    position: sticky; /* Header fixa no topo durante rolagem e ocupa espaço no fluxo */
     transition: all 0.3s ease;
-    z-index: 999;
+    z-index: 999; /* Para ter certeza que a header ficará sobre qualquer item da página */
     width: 100%;
     height: 100px;
     top: 0;
     left: 0;
 }
 
+/* Header na sua versão menor = .shrink */
 #header.shrink {
     background-color: #1c1c1ce0;
     height: 60px;
@@ -73,7 +78,7 @@ body {
 .botao:hover {
     background-color: var(--dourado);
     transform: scale(1.07);
-    cursor: pointer;
+    cursor: pointer; /* Ponteiro demonstra que há uma ação ali */
     transition: ease-in-out 0.3s;
 }
 
@@ -81,6 +86,8 @@ body {
     background-color: var(--vermelho);
     color: var(--textoBranco);
 }
+
+/* CONFIGURAÇÕES DO SOBREMIM E OUTRAS TAGS */
 
 a {
     text-decoration: none;
@@ -92,17 +99,6 @@ h1 {
     font-weight: bold;
 }
 
-.formacao-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 30px; 
-    margin-top: 15px;
-}
-
-#idiomas {
-    border-left: 3px solid rgb(75, 75, 75);
-    padding-left: 20px;
-}
 
 #sobreMim, #formacao, #projetos {
     padding: 20px 0 30px 0;
@@ -134,6 +130,21 @@ span {
     padding: 10px;
 }
 
+/* CONFIGURAÇÕES DA LISTA EM FORMAÇÕES */
+
+/* Grid para ajustar a centralizar as duas colunas da sessão formação */
+.formacao-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px; 
+    margin-top: 15px;
+}
+
+#idiomas {
+    border-left: 3px solid rgb(75, 75, 75);
+    padding-left: 20px;
+}
+
 #icone-graduacao,
 #icone-idiomas {
     padding-left: 0;
@@ -149,18 +160,20 @@ span {
 }
 
 #icone-graduacao li::before {
-    content: url('imagens/chapeu.png'); /* Chapéu de formatura */
+    content: url('imagens/chapeu.png'); /* Marcador como chapéu de formatura */
     position: absolute;
     left: 0;
     top: 0;
 }
 
 #icone-idiomas li::before {
-    content: url('imagens/livro.png'); /* Ícone de livro */
+    content: url('imagens/livro.png'); /* Marcador como ícone de livro */
     position: absolute;
     left: 0;
     top: 0;
 }
+
+/* CONFIGURAÇÕES DOS PROJETOS E SUAS TRANSIÇÕES */
 
 .container-projetos {
     display: flex;
@@ -173,7 +186,7 @@ span {
     position: relative;
     width: 250px;
     height: auto;
-    overflow: hidden;
+    overflow: hidden; /* Tudo que estiver fora da div é cortado */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
@@ -181,15 +194,15 @@ span {
 .projeto img, .emBreve img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Mantém a proporção das imagens */
     display: block;
     opacity: 1;
     transition: .5s ease;
-    backface-visibility: hidden;
+    backface-visibility: hidden; /* Esconde a parte de trás  */
 }
 
 .emBreve img {
-    filter: grayscale(60%) blur(3px);
+    filter: grayscale(60%) blur(3px); /* Tom de cinza e blur aos projetos ainda não finalizados para maior suspense */
 }
 
 .middle {
@@ -215,7 +228,7 @@ span {
     opacity: 1;
 }
 
-.projeto:hover, .emBreve:hover {
+.projeto:hover, .emBreve:hover, .texto a:hover {
     cursor: pointer;
 }
 
@@ -232,15 +245,13 @@ span {
     font-weight: bold;
 }
 
-.texto a:hover {
-    cursor: pointer;
-}
-
 .descricao {
     font-size: 12px;
     text-align: center;
     color: var(--preto);
 }
+
+/* CONFIGURAÇÕES DO POP-UP E SEUS ELEMENTOS */
 
 #popup {
     border: 1px solid gray;
@@ -274,6 +285,8 @@ span {
 #enviar, #fechar:hover {
     cursor: pointer;
 }
+
+/* CONFIGURAÇÕES DO RODAPÉ*/
 
 footer {
     background-color: var(--preto);
