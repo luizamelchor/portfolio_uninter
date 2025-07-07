@@ -1,2 +1,2 @@
-# web_uninter
-Aulas de Ferramentas de Web da UNINTER
+# portfolio_uninter
+Portfólio para a disciplina de Ferramentas de Web da UNINTER
