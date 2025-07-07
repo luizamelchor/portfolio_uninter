@@ -153,14 +153,14 @@ span {
 }
 
 #icone-graduacao li::before {
-    content: url('/imagens/chapeu.png'); /* Chapéu de formatura */
+    content: url('imagens/chapeu.png'); /* Chapéu de formatura */
     position: absolute;
     left: 0;
     top: 0;
 }
 
 #icone-idiomas li::before {
-    content: url('/imagens/livro.png'); /* Ícone de livro */
+    content: url('imagens/livro.png'); /* Ícone de livro */
     position: absolute;
     left: 0;
     top: 0;
@@ -173,7 +173,7 @@ span {
     gap: 25px; /* Espaço entre divs */
 }
 
-.projeto {
+.projeto, .emBreve {
     position: relative;
     width: 250px;
     height: auto;
@@ -182,7 +182,7 @@ span {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.projeto img {
+.projeto img, .emBreve img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -190,6 +190,10 @@ span {
     opacity: 1;
     transition: .5s ease;
     backface-visibility: hidden;
+}
+
+.emBreve img {
+    filter: grayscale(60%) blur(3px);
 }
 
 .middle {
@@ -203,15 +207,19 @@ span {
     -ms-transform: translate(-50%, -50%)
 }
 
-.projeto:hover img {
+.projeto:hover img, .emBreve:hover img {
     opacity: 0.3;
 }
 
-.projeto:hover .middle {
+.projeto:hover img {
+    filter: blur(3px);
+}
+
+.projeto:hover .middle, .emBreve:hover .middle {
     opacity: 1;
 }
 
-.projeto:hover {
+.projeto:hover, .emBreve:hover {
     cursor: pointer;
 }
 
@@ -219,7 +227,7 @@ span {
     background-color: var(--vermelho);
     color: var(--textoBranco);
     font-size: 15px;
-    padding: 16px 32px;
+    padding: 15px 23px;
 }
 
 .texto a {
@@ -230,6 +238,12 @@ span {
 
 .texto a:hover {
     cursor: pointer;
+}
+
+.descricao {
+    font-size: 12px;
+    text-align: center;
+    color: var(--preto);
 }
 
 #popup {
